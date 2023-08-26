@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+    <!-- The website JavaScript file C:/Users/ldivy/Downloads/BioBook/BioBookPng.png-->
+   <!-- <script src="script.js" defer></script>-->
+
+    <div class="header" >
+<img src="https://cdn.glitch.global/0e378c8a-a589-4e7d-83df-6a5111cab24e/Group%2010.png?v=1692289891552" alt="logo" id="logo"/>        <h1 id="title">BioBook</h1>
+    </div>
+  </head>
+  <body>
+    Welcome to bio book!
+    <br> 
+    Get started: 
+    <br>
+    <ul id="navbar">
+        <li class = "logged-in">
+            <a href="#" id = "account" class = "grey-text modal-trigger" data-target = "modal-account">account</a>
+        </li>
+        <li class = "logged-in">
+            <a href="#" id = "logout" class = "grey-text" >logout</a>
+        </li>
+        <li class = "logged-in">
+            <a href="#" id = "createcode" class = "grey-text modal-trigger" data-target = "modal-create">code</a>
+        </li>
+        <li class = "logged-out">
+            <a href="#" id = "login" class = "grey-text modal-trigger" data-target = "modal-login">login</a>
+        </li>
+        <li class = "logged-out">
+            <a href="#" id = "signup" class = "grey-text modal-trigger" data-target = "modal-signup">Sign up</a>
+        </li>
+    </ul>
+
+    <!-- signup -->
+    <div id="modal-signup" class = "modal">
+        <div class="modal-content">
+            <h4> sign up </h4> <br/>
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required/>
+                    <label for="signup-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" required/>
+                    <label for="signup-password">Create password</label>
+                </div>
+                <button>Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- login modal-->
+    <div id="modal-login" class = "modal">
+        <div class = "modal-content">
+            <h4>Login</h4><br/>
+            <form id ="login-form">
+                <div class="input-field">
+                    <input type="email" id ="login-email" required/>
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class = "input-field">
+                    <input type ="password" id="login-password" required/>
+                    <label for="login-password">Your password</label> 
+                </div>
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+    <!--account modal-->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account details</h4><br/>
+            <div class="account-details"></div>
+        </div>
+    </div>
+
+    <!--create code-->
+    <!--idea:like the tutorial can add different personal infos for kids and such-->
+    <div id="modal-create" class="modal"> 
+        <div class = "modal-content">
+            <h4>generate code</h4><br/>
+        </div>
+    </div>
+<!-- <script src = "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+    <script src = "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"></script> -->
+    <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js'
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAJZsk-MeWO6JiaR4DLGueaOWUFo0vU3bw",
+          authDomain: "biobook1.firebaseapp.com",
+          projectId: "biobook1",
+          storageBucket: "biobook1.appspot.com",
+          messagingSenderId: "1020662144608",
+          appId: "1:1020662144608:web:a403f28dbfebc67d39ed05",
+          measurementId: "G-4KBMDBFM1Q"
+        };
+      
+        // Initialize Firebase
+        export const app = initializeApp(firebaseConfig);
+        export const analytics = getAnalytics(app);
+        //make auth and firestore references
+        export const auth = getAuth(app);
+        console.log(typeof auth);
+        export const db = getFirestore(app);
+        //update firestore settings
+    </script>
+    <script src="auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

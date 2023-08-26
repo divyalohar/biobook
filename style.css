@@ -1,0 +1,145 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #69F7BE;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+#title {
+  color: #10217d;
+  text-align: left;
+  font-size: 70px;
+font-family: 'Nunito', sans-serif;
+line-height: 100px;
+}
+
+h1 {
+   display:flex;
+  justify-content:space-between;
+  align-items:center; 
+  margin-bottom: 10px;
+    padding-top: 12px;
+}
+
+.container-fluid img{
+  float:left;
+  width: 63px;
+  height: 73px;
+  padding-left: 3px;
+  margin-right: 8px;
+}
+
+.container-fluid{background-color:#e9fffa;
+  display: flex;
+  align-items:center;
+}
+
+
+#navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #10217d;
+font-family: 'Nunito', sans-serif;
+  padding-right: 15px;
+}
+#navigation2 {
+  margin: 0;
+  font-size: 40px;
+  padding-right: 35px;}
+
+.button {
+  background-color: #10217d;
+  border: none;
+  color: white;
+  padding: 17px 12px ;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+font-family: 'Nunito', sans-serif;
+}
+
+
+
+li {
+  display: inline;
+ }
+.fnbox {
+  color: black;
+  text-align: left;
+}
+
+body {
+  color: #10217d;
+font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+  line-height: 35%;
+line-width: 100%
+height: auto}
+
+#body2 {
+  color: #10217d;
+font-family: 'Nunito', sans-serif;
+  padding-right: 2rem;
+  font-size: 20px;
+  margin-top: 0px;
+    line-height: 35%;
+}
+
+input[type=text], select {
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 27px;
+  box-sizing: border-box;
+}
+
+input[type=text1], select {
+  width: 32%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+
+input[type=text2], select {
+  width: 25%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+
+.savebutton {font-size: 490px}
